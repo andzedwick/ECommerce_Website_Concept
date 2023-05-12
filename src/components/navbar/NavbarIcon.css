@@ -1,0 +1,16 @@
+#navbar--icon {
+    position: relative;
+    height: var(--navbar-icon-height);
+    width: var(--navbar-icon-height);
+    border-radius: 50%;
+    margin-left: 1vw;
+}
+
+#navbar--icon-img {
+    position: relative;
+    height: 60%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    user-select: none;
+}

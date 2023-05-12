@@ -1,0 +1,40 @@
+#navbar {
+    position: relative;
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: var(--navbar-height);
+    background-color: #00344d;
+    z-index: 999;
+}
+
+#navbar--logo {
+    height: 100%;
+    margin-left: 1vw;
+    user-select: none;
+    cursor: pointer;
+}
+
+#navbar--browse {
+    margin: 0 0.5vw;
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 1.5rem;
+    user-select: none;
+    border: none;
+    background: none;
+    height: 70%;
+    width: 8vw;
+    border-radius: 0.8vw;
+}
+
+#navbar--right-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    width: 50%;
+    height: 100%;
+    padding: 0px 1vw;
+}

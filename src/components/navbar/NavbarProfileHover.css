@@ -1,0 +1,63 @@
+#navbar--profile-hover {
+    position: absolute;
+    top: calc(var(--navbar-icon-height) - (var(--navbar-icon-height) / 4));
+    right: -0.3vw;
+    width: 13vw;
+    height: 30vh;
+}
+
+#navbar--profile-hover-triangle-container {
+    position: absolute;
+    top: calc((var(--navbar-icon-height) / 4) + 0.3vh);
+    right: calc((var(--navbar-icon-height) / 2) - 0.3vw);
+    width: var(--profile-hover-triangle-container-size);
+    height: var(--profile-hover-triangle-container-size);
+}
+
+#navbar--profile-hover-triangle {
+    position: absolute;
+    top: 0;
+    right: calc(-1 * (var(--profile-hover-triangle-container-size) / 2));
+    width: 0;
+    height: 0;
+    border-left: var(--profile-hover-triangle-container-size) solid transparent;
+    border-right: var(--profile-hover-triangle-container-size) solid transparent;
+    border-bottom: var(--profile-hover-triangle-container-size) solid;
+}
+
+#navbar--profile-hover-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: calc(((var(--navbar-height) - var(--navbar-icon-height)) / 2) + (var(--navbar-icon-height) / 4) + 0.5vh);
+    right: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 0.3rem;
+}
+
+#navbar--profile-hover-container table {
+    border-collapse: separate;
+    border-spacing: 0 0vh;
+    width: 100%;
+    text-align: center;
+}
+
+#navbar--profile-hover-container td {
+    padding: 0.7vh 0;
+}
+
+#navbar--profile-hover-container a {
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 20px;
+    margin-bottom: 2vh;
+    user-select: none;
+}
+
+.navbar--profile-hover-container-hr {
+    margin: 1vh 0;
+    width: 80%;
+    border-top: 1px solid rgba(0, 0, 0, 0.3);
+}

@@ -1,0 +1,15 @@
+body {
+    --navbar-height: 60px;
+    --navbar-icon-height: calc(var(--navbar-height) * 0.7);
+    --profile-hover-triangle-container-size: 26px;
+    --product-card-width: 280px;
+    --product-card-height: 420px;
+    --product-card-border-radius: 10px;
+    --product-card-inner-height: calc(var(--product-card-height) - var(--product-card-border-radius));
+    --product-card-inner-width: calc(var(--product-card-width) - var(--product-card-border-radius));
+
+    font-family: 'Fira Sans', sans-serif;
+    padding: 0px;
+    margin: 0px;
+    background-color: white;
+}
