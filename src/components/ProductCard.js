@@ -9,8 +9,6 @@ export default function ProductCard(props) {
     const price = parseFloat(cardProps.price).toFixed(2);
     const prevPrice = (price / (100 - cardProps.discountPercentage) * 100).toFixed(2);
 
-    console.log(cardProps);
-
     return (
         <div
             id='product-card'

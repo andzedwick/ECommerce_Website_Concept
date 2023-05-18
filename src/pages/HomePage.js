@@ -8,20 +8,21 @@ export default function HomePage(props) {
     const {globals} = props;
 
     const [data, setData] = useState({});
+    const [searchTerm, setSearchTerm] = useState("");
 
+    // Used to handle searches
+    const onSearch = (searchString) => {
+        if (searchString !== searchTerm) {
+            setSearchTerm(searchString);
+        }
+    }
+
+    // Handles getting product data whenever the searchTerm chagnes
     useEffect(() => {
-        fetch('https://dummyjson.com/products/55')
+        fetch(`https://dummyjson.com/products/search?q=${searchTerm}`)
             .then(response => response.json())
             .then(dt => setData(dt));
-    }, []);
-
-    useEffect(() => {
-        fetch('https://dummyjson.com/products')
-            .then(response => response.json())
-            .then(dt => console.log(dt));
-    }, []);
-
-    console.log(data);
+    }, [searchTerm]);
 
     return (
         <div
@@ -30,6 +31,7 @@ export default function HomePage(props) {
         >
             <Navbar 
                 globals={globals}
+                onSearch={onSearch}
             />
             <div
                 id='homePage--content'

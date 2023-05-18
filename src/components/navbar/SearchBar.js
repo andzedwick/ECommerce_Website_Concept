@@ -8,6 +8,17 @@ export default function SearchBar(props) {
     // States
     const [searchHover, setSearchHover] = useState(false);
     const [searchActive, setSearchActive] = useState(false)
+    const [searchString, setSearchString] = useState("");
+
+    const handleSearchChange = (event) => {
+        setSearchString(event.target.value);
+    };
+
+    const handleKeyEvent = (event) => {
+         if (event.key === "Enter") {
+            handleClick(searchString);
+         }
+    };
 
     // Dynamic class names
     var classPrefixSearchBarIconContainer = globals.classPrefix;
@@ -26,11 +37,19 @@ export default function SearchBar(props) {
 
     return (
         <div id='search--container' className={globals.classPrefix}>
-            <input id='search--box' className={globals.classPrefix} type='text' maxLength={128} placeholder='Search' />
+            <input
+                id='search--box'
+                className={globals.classPrefix}
+                type='text'
+                maxLength={128}
+                placeholder='Search'
+                onChange={handleSearchChange}
+                onKeyDown={handleKeyEvent}
+            />
             <div
                 id='search--icon-container'
                 className={classPrefixSearchBarIconContainer}
-                onClick={handleClick}
+                onClick={() => handleClick(searchString)}
                 onMouseDown={() => setSearchActive(true)}
                 onMouseUp={() => setSearchActive(false)}
                 onMouseEnter={() => setSearchHover(true)}

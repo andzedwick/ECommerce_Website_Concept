@@ -10,18 +10,16 @@ import cartIcon   from '../../resources/cart-icon-blue.png';
 import profileIcon from '../../resources/profile-icon-blue.png';
 
 export default function Navbar(props) {
-    const {globals} = props;
+    const {globals, onSearch} = props;
 
     const [profileHover, setProfileHover] = useState(false);
 
-    function handleClick(id, event) {
-        if (id === '1') {
-
-        } else if (id === '2'){
-
-        }
+    // Called whenever a search occurs
+    function handleClick(searchString) {
+        onSearch(searchString);
     }
 
+    // Called by NavbarIcon when the icon is hovered on
     function handleHover(id, isHover) {
         if (id === '2') {
             setProfileHover(isHover);
