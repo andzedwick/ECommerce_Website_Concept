@@ -12,7 +12,7 @@ export default function App() {
     }
     const classPrefix = darkTheme ? constants.DARK_THEME_CLASS_NAME : constants.LIGHT_THEME_CLASS_NAME;
 
-    const globals = {
+    var globals = {
         darkTheme: darkTheme,
         setDarkTheme: setDarkTheme,
         constants: constants,

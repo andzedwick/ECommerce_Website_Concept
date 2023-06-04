@@ -1,6 +1,7 @@
 body {
-    --navbar-height: 60px;
-    --navbar-icon-height: calc(var(--navbar-height) * 0.7);
+    --navbar-height: 100px;
+    --navbar-main-height: 60px;
+    --navbar-icon-height: calc(var(--navbar-main-height) * 0.7);
     --profile-hover-triangle-container-size: 26px;
     --product-card-width: 280px;
     --product-card-height: 420px;

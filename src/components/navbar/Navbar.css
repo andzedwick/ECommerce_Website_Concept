@@ -3,15 +3,24 @@
     padding: 0px;
     margin: 0px;
     display: flex;
+    flex-direction: column;
+    height: var(--navbar-height);
+    z-index: 999;
+}
+
+#navbar--main {
+    position: relative;
+    padding: 0px;
+    margin: 0px;
+    display: flex;
     flex-direction: row;
     align-items: center;
-    height: var(--navbar-height);
-    background-color: #00344d;
+    height: var(--navbar-main-height);
     z-index: 999;
 }
 
 #navbar--logo {
-    height: 100%;
+    height: var(--navbar-icon-height);
     margin-left: 1vw;
     user-select: none;
     cursor: pointer;
@@ -37,4 +46,8 @@
     width: 50%;
     height: 100%;
     padding: 0px 1vw;
+}
+
+#navbar--filter {
+    height: calc(var(--navbar-height) - var(--navbar-main-height));
 }

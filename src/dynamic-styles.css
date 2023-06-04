@@ -72,6 +72,26 @@
     background-color: rgb(150, 150, 150);
 }
 
+#navbar--filter.light-theme {
+    background-color: rgb(150, 150, 150);
+}
+
+#dropdown--open-list.light-theme {
+    background-color: rgb(170, 170, 170);
+    box-shadow: 2px 2px rgb(135, 135, 135);
+}
+
+#dropdown--category-select.light-theme {
+    background-color: rgb(170, 170, 170);
+    box-shadow: 2px 2px rgb(135, 135, 135);
+}
+
+.light-theme--category-label:hover {
+    background-color: rgb(129, 129, 129);
+    font-weight: 500;
+    cursor: pointer;
+}
+
 #homePage--content.light-theme {
     background-color: rgb(255, 255, 255);
 }
